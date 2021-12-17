@@ -13,7 +13,13 @@ class PostResidentList extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://rickandmortyapi.com/");
+    axios.get("https://rickandmortyapi.com/")
+    .then(response => {
+      this.setState({
+        list: response.data
+      })
+      console.log(response.data)
+    })
   }
 
   render() {
