@@ -1,12 +1,14 @@
 import logo from "./logo.svg";
 import "./App.css";
-import PostResidentList from "./components/PostResidentList"
+import Form from "./components/Form";
+import GetList from "./components/GetList";
 
 function App() {
   return (
     <div className='App'>
       <h1></h1>
-      <PostResidentList></PostResidentList>
+      <GetList></GetList>
+      <Form></Form>
     </div>
   );
 }

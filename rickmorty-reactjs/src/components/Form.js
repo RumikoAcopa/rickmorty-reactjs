@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "./axios"
 
-class CharacterNotes extends Component {
+class Form extends Component {
 
   constructor(props) {
     super(props);
@@ -18,7 +18,13 @@ class CharacterNotes extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state);
-    axios.post("https://jsonplaceholder.typicode.com/guide");
+    axios.post("https://jsonplaceholder.typicode.com/guide", this.state);
+      .then(response => {
+      console.log(response);
+    })
+      .catch(err => {
+      console.log(err);
+    })
   };
 
   render() {
@@ -40,4 +46,4 @@ class CharacterNotes extends Component {
   }
 }
 
-export default CharacterNotes;
+export default Form;
