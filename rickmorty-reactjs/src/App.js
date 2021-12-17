@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import PostResidentList from "./PostResidentList"
+import PostResidentList from "./components/PostResidentList"
 
 function App() {
   return (
