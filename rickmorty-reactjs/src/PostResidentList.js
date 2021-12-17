@@ -8,7 +8,7 @@ class PostResidentList extends Component {
     super(props);
 
     this.state = {
-      list: []
+      lists: []
     }
   }
 
@@ -16,18 +16,22 @@ class PostResidentList extends Component {
     axios.get("https://rickandmortyapi.com/")
     .then(response => {
       this.setState({
-        list: response.data
+        lists: response.data
       })
       console.log(response.data)
     })
   }
 
   render() {
+    const list =this.state
     return (
       <div>
-        Hello
+        <h1>List of Residents</h1>
+        {lists.map((list) => (
+          <div key={list.id}>{list.location}</div>
+        ))}
       </div>
-    )
+    );
 
   
   }
