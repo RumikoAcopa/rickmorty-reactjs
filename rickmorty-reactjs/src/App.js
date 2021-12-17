@@ -5,6 +5,7 @@ import PostResidentList from "./PostResidentList"
 function App() {
   return (
     <div className='App'>
+      <h1></h1>
       <PostResidentList></PostResidentList>
     </div>
   );
